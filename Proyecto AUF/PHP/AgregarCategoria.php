@@ -33,9 +33,9 @@ if (isset($_GET['mensaje'])) {
             <h1>Agrege los datos de su Categoria</h1>
             <form action="Categoria.php" method="POST" class="container">
                 <label for="Nombre_Categoria">Nombre</label>
-                <input type="text" name="Nombre_Categoria" id="Nombre_Categoria" required>
+                <input type="text" name="Nombre_Categoria" id="Nombre_Categoria" placeholder="Nombre de la Categoria" required>
                 <label for="Descripcion">Descripcion</label>
-                <input type="text" name="Descripcion" id="Descripcion" required>
+                <input type="text" name="Descripcion" id="Descripcion" placeholder="Descripcion de la Categoria" required>
                 <button class="subirbutton" type="submit">></button>
 
             </form>
@@ -43,6 +43,9 @@ if (isset($_GET['mensaje'])) {
         </section>
 
     </main>
+    <footer>
+           <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
 </body>
 
 </html>

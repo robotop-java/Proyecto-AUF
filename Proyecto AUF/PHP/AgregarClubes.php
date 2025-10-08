@@ -33,9 +33,10 @@ if (isset($_GET['mensaje'])) {
             <h1>Agrege los datos de su Club</h1>
             <form action="Clubes.php" method="POST" class="container">
                 <label for="NombreClub">Nombre</label>
-                <input type="text" name="NombreClub" id="NombreClub" required>
+                <input type="text" name="NombreClub" id="NombreClub" placeholder="Nombre del Club" required>
                 <label for="CategoriaNombre">Categoría</label>
                 <select name="CategoriaNombre" id="CategoriaNombre" required>
+                    <option value="">Seleccione una Categoria</option>
                     <?php
                         require '../config.php';
                         $stmt = $pdo->query("SELECT Nombre_Categoria, Descripcion FROM Categoria");
@@ -46,7 +47,7 @@ if (isset($_GET['mensaje'])) {
                 </select>
                 <label for="Departamento">Departamento</label>
                 <select name="Departamento" id="Departamento">
-                    <option value="">Seleccione un departamento</option>
+                    <option value="">Seleccione un Departamento</option>
                     <option value="Montevideo">Montevideo</option>
                     <option value="Salto">Salto</option>
                     <option value="Canelones">Canelones</option>
@@ -67,7 +68,7 @@ if (isset($_GET['mensaje'])) {
                 </select>
                 <label for="Ciudad">Ciudad</label>
                 <select name="Ciudad" id="Ciudad">
-                    <option value="">Seleccione una ciudad</option>
+                    <option value="">Seleccione una Ciudad</option>
                     <option value="Canelones">Canelones</option>
                     <option value="Montevideo">Montevideo</option>
                     <option value="Salto">Salto</option>
@@ -97,6 +98,9 @@ if (isset($_GET['mensaje'])) {
         </section>
 
     </main>
+    <footer>
+           <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
 </body>
 
 </html>

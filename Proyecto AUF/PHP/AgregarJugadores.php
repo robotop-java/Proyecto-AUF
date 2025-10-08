@@ -31,16 +31,15 @@ if (isset($_GET['mensaje'])) {
         <section id="Jugadores">
 
             <h1>Agrege los datos de su jugador</h1>
-            <form action="Jugadores.php" method="POST" class="container">
+            <form id="FormJugador" action="Jugadores.php" method="POST" class="container">
                 <label for="CI">CI</label>
                 <input type="number" name="CI" id="CI" placeholder="5.123.456-7" pattern="\d{1}\.\d{3}\.\d{3}-\d{1}"
-                            title="Formato: 1.234.567-8" required>
+                 title="Formato: 1.234.567-8" required>
                 <label for="Nombre">Nombre</label>
-
                 <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
                 <label for="Apellido">Apellido</label>
                 <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
-                <label for="Club_ID">ID Club</label>
+                <label for="Club_ID">Club</label>
                 <select name="Club_ID" id="Club_ID" required>
                     <option value="">Seleccione un club</option>
                     <?php
@@ -67,16 +66,20 @@ if (isset($_GET['mensaje'])) {
                 <label for="Goles">Goles</label>
                 <input type="number" name="Goles" id="Goles" placeholder="0" required>
                 <label for="Tarjetas">Tarjetas</label>
-                <input type="text" name="Tarjetas" id="Tarjetas" placeholder="0" required>
+                <input type="number" name="Tarjetas" id="Tarjetas" placeholder="0" required>
                 <label for="Partidos">Partidos</label>
                 <input type="number" name="Partidos" id="Partidos" placeholder="0" required>
                 <button class="subirbutton" type="submit">></button>
-
+<p class="Errormsg" id="Error" ></p>
             </form>
 
         </section>
 
     </main>
+    <footer>
+   <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+    <script src="../JAVA/DataJugadores.js"> </script>
 </body>
 
 </html>

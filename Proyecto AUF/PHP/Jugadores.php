@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        exit;
     } catch (PDOException $e) {
         if ($e->errorInfo[1] == 1062) {
-            header("Location: AgregarJugadores.php?mensaje=" . urlencode("El jugador ya existe."));
+            header("Location: AgregarJugadores.php?mensaje=" . urlencode("Jugador registrado exitosamente"));
         } else {
             header("Location: AgregarJugadores.php?mensaje=" . urlencode("Error al registrar el jugador: " . $e->getMessage()));
         }

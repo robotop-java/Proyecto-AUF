@@ -41,10 +41,11 @@ if (isset($_GET['mensaje'])) {
 
             <h1>Agrege los datos de su Torneo</h1>
             <form action="Torneos.php" method="POST" class="container">
-                <label for="Nombre_Torneo">Nombre del Torneo</label>
-                <input type="text" name="Nombre_Torneo" id="Nombre_Torneo" required>
+                <label for="Nombre_Torneo">Nombre</label>
+                <input type="text" name="Nombre_Torneo" id="Nombre_Torneo" placeholder="Nombre del Torneo" required>
                 <label for="ID_Partidos">Partidos</label>
                 <select name="ID_Partidos" id="ID_Partidos" required>
+                    <option value="">Seleccione el Partido</option>
                     <?php
 require '../config.php';
 
@@ -54,6 +55,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo "<option value='{$row['ID_PARTIDOS']}'>
         ID: {$row['ID_PARTIDOS']} - Fecha: {$row['Fecha']} - Local: {$row['Local']} - Visitante: {$row['Visitante']}
     </option>";
+  
 }
 ?>
                 </select>
@@ -68,6 +70,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
 
     </main>
+    <footer>
+           <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
 </body>
 
 </html>

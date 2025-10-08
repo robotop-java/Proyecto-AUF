@@ -73,9 +73,9 @@ if (isset($_GET['mensaje'])) {
   ?>
                 </select>
                 <label for="ResultadoLocal">Resultado Local</label>
-                <input type="number" name="ResultadoLocal" id="ResultadoLocal" required>
+                <input type="number" name="ResultadoLocal" id="ResultadoLocal" placeholder="Ponga el resultado del Local" required>
                 <label for="ResultadoVisitante">Resultado Visitante</label>
-                <input type="number" name="ResultadoVisitante" id="ResultadoVisitante" required>
+                <input type="number" name="ResultadoVisitante" id="ResultadoVisitante" placeholder="Ponga el resultado del Visitante" required>
                 <label for="Condicion">Condición</label>
                 <select name="Condicion" id="Condicion" required>
                     <option value="Amistoso">Amistoso</option>
@@ -93,6 +93,9 @@ if (isset($_GET['mensaje'])) {
         </section>
 
     </main>
+    <footer>
+           <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
 </body>
 
 </html>
