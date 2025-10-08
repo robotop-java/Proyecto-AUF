@@ -48,7 +48,7 @@ ID_PARTIDOS INT AUTO_INCREMENT PRIMARY KEY,
 Nombre_Categoria VARCHAR(60),
 ResultadoVisitante int(2) NOT NULL,
 ResultadoLocal int(2) NOT NULL,
-Condicion ENUM('Local','Visitante','Neutral') NOT NULL,
+Condicion ENUM('Amistoso','Oficial','Final', 'Semifinal') NOT NULL,
 Visitante VARCHAR(255) NOT NULL,
 Local VARCHAR(255) NOT NULL,
 Fecha DATE NOT NULL,
@@ -105,10 +105,10 @@ INSERT INTO Jugadores (CI, Club_ID, Nombre, Apellido, Posicion, Numero, Goles, T
 
 
 INSERT INTO Partidos (Nombre_Categoria, ResultadoVisitante, ResultadoLocal, Condicion, Visitante, Local, Fecha) VALUES
-('Primera División', 1, 2, 'Local', 'Liverpool Fútbol Club', 'Club Atlético Peñarol', '2025-03-15'),
-('Primera División', 1, 1, 'Visitante', 'Defensor Sporting Club', 'Club Nacional de Football', '2025-03-16'),
-('Primera División', 0, 3, 'Neutral', 'Danubio Fútbol Club', 'Cerro Largo Fútbol Club', '2025-03-17'),
-('Primera División', 2, 0, 'Local', 'Club Atlético Torque', 'Club Plaza Colonia de Deportes', '2025-03-18');
+('Primera División', 1, 2, 'Final', 'Liverpool Fútbol Club', 'Club Atlético Peñarol', '2025-03-15'),
+('Primera División', 1, 1, 'Semifinal', 'Defensor Sporting Club', 'Club Nacional de Football', '2025-03-16'),
+('Primera División', 0, 3, 'Amistoso', 'Danubio Fútbol Club', 'Cerro Largo Fútbol Club', '2025-03-17'),
+('Primera División', 2, 0, 'Final', 'Club Atlético Torque', 'Club Plaza Colonia de Deportes', '2025-03-18');
 
 
 

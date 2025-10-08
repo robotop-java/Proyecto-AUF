@@ -10,12 +10,13 @@
 
 :root {
     --Color-Primario: #3498db;
-    --Color-Secundario: #3495ce;
+    --Color-Secundario: #2886c5;
     --Color-Fondo: #ecf0f1;
     --Color-Texto: #2c3e50;
     --Color-Texto-nav: #ffffff;
     --Color-Texto-Mous: #e5ff00;
     --Tamaño-De-Borde: 8px;
+    --Color-Botton:  rgba(20, 98, 245, 0.342);
 }
 
 body {
@@ -86,17 +87,49 @@ img {
     flex-direction: column;
 
 }
+.container_index{
+       height: auto;
+    width: auto;
+    margin-top: 5rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    border: var(--Tamaño-De-Borde) solid var(--Color-Secundario);
+    border-radius: 5rem;
+    background-color: var(--Color-Fondo);
+    box-shadow: 0 0 8cqb rgba(0, 162, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+}
+
 label{
     font-weight: bold;
    font-size:medium;
-   margin: 0px 10rem;
+   margin: 10px 10rem;
 }
 
-input, button, select{
+input, select{
     margin: 0px 10rem;
 }
+button {
+    margin: 2rem 20rem;
+    background-color: var(--Color-Botton);
+    color: var(--Color-Texto-Mous);
+}
 
-
+.buscar{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    background-color: var(--Color-Secundario);
+}
+.buscar-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
 footer {
     background-color: var(--Color-Primario);
     color: var(--Color-Texto-Nav);

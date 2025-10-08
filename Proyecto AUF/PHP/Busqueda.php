@@ -45,7 +45,7 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <nav>
         <img class="Logo" src="../assets/AUF-Logo.png" alt="">
-        <p>Menu de Navegación</p><a href="../index.php">Inicio</a> <a href="#">Agregar Jugadores</a><a
+        <p>Menu de Navegación</p><a href="../index.php">Inicio</a> <a href="AgregarJugadores.php">Agregar Jugadores</a><a
             href="AgregarClubes.php"> Agregar Clubes</a> <a href="AgregarCategoria.php">Agregar Categorías</a> <a
             href="AgregarPartidos.php">Agregar Partidos</a> <a href="AgregarTorneos.php">Agregar Torneos</a> <img
             class="Logo" src="../assets/logotipo-de-instagram.png" alt=""> <img class="Logo"
@@ -55,8 +55,8 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <section id="Jugadores">
 
             <h1> Resultado </h1>
-            <form class="container">
-           <div class="resultados">
+            <form class="container_index">
+   
             <?php
 if (count($resultados) > 0) {
     foreach ($resultados as $resultado) {
@@ -69,7 +69,7 @@ if (count($resultados) > 0) {
     }
 }
 ?>
-            </div>
+          
             </form>
 
         </section>

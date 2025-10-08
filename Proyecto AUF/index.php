@@ -27,7 +27,7 @@
                     <option value="partido">Partido</option>
                     <option value="torneo">Torneo</option>
                 </select>
-                <input type="text" name="Busqueda" id="Busqueda" placeholder="Buscar" required>
+                <input type="text" name="Busqueda" id="Busqueda" placeholder="Buscar" class="buscar-input" required>
                 <button type="submit">Buscar</button>
 </form>
 </div>
@@ -36,12 +36,12 @@
         <div>
             <img src="assets/AUF IMAGEN IMPORTANTE.png" alt="">
         </div>
-        <div class="container">
+        <div class="container_index">
             <h2>Jugadores Destacados</h2>
             <ul>
                 <?php
             require 'config.php';
-            $sql = "SELECT * FROM jugadores ORDER BY Goles DESC LIMIT 5";
+            $sql = "SELECT * FROM jugadores ORDER BY Goles DESC LIMIT 10";
             $stmt = $pdo->prepare ($sql);
             $stmt->execute();
             $jugadores = $stmt->fetchAll(PDO::FETCH_ASSOC);

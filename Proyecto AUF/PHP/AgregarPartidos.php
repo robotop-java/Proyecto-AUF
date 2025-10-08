@@ -52,17 +52,7 @@ if (isset($_GET['mensaje'])) {
                         }
                     ?>
                 </select>
-                <label for="ResultadoLocal">Resultado Local</label>
-                <input type="number" name="ResultadoLocal" id="ResultadoLocal" required>
-                <label for="ResultadoVisitante">Resultado Visitante</label>
-                <input type="number" name="ResultadoVisitante" id="ResultadoVisitante" required>
-                <label for="Condicion">Condición</label>
-                <select name="Condicion" id="Condicion" required>
-                    <option value="Local">Local</option>
-                    <option value="Visitante">Visitante</option>
-                    <option value="Neutral">Neutral</option>
-                </select>
-                <label for="Local">Club Local</label>
+                              <label for="Local">Club Local</label>
                 <select name="Local" id="Local" required>
                     <option value="">Seleccione Club Local</option>
                     <?php
@@ -82,6 +72,18 @@ if (isset($_GET['mensaje'])) {
   }
   ?>
                 </select>
+                <label for="ResultadoLocal">Resultado Local</label>
+                <input type="number" name="ResultadoLocal" id="ResultadoLocal" required>
+                <label for="ResultadoVisitante">Resultado Visitante</label>
+                <input type="number" name="ResultadoVisitante" id="ResultadoVisitante" required>
+                <label for="Condicion">Condición</label>
+                <select name="Condicion" id="Condicion" required>
+                    <option value="Amistoso">Amistoso</option>
+                    <option value="Oficial">Oficial</option>
+                    <option value="Final">Final</option>
+                    <option value="Semifinal">SemiFinal</option>
+                </select>
+  
                 <label for="Fecha">Fecha</label>
                 <input type="date" name="Fecha" id="Fecha" required>
                 <button class="subirbutton" type="submit">></button>
