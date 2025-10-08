@@ -117,18 +117,36 @@ button {
     color: var(--Color-Texto-Mous);
 }
 
-.buscar{
-    display: block;
-    justify-content: center;
+.buscar {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     margin: 1rem 0;
     background-color: var(--Color-Secundario);
+    width: 100%;
+    gap: 0.5rem; 
+}
+
+.buscar form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0; 
+    font-size: 1.2rem; 
+}
+
+.buscar-input,
+.buscar button {
+    margin: 0;
+    font-size: 1.2rem; 
+    padding: 0.7rem 1.2rem; 
 }
 .buscar-input {
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
     margin-right: 0.5rem;
+   
 }
 .Errormsg {
     
