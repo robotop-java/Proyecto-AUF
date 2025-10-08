@@ -39,7 +39,7 @@ if (isset($_GET['mensaje'])) {
     <main>
         <section id="Jugadores">
 
-            <h1>Agrege los datos de su torneo</h1>
+            <h1>Agrege los datos de su Torneo</h1>
             <form action="Torneos.php" method="POST" class="container">
                 <label for="Nombre_Torneo">Nombre del Torneo</label>
                 <input type="text" name="Nombre_Torneo" id="Nombre_Torneo" required>
