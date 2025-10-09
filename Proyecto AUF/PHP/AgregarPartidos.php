@@ -46,9 +46,9 @@ if (isset($_GET['mensaje'])) {
                 <select name="Nombre_Categoria" id="Nombre_Categoria" required>
                     <?php
                         require '../config.php';
-                        $stmt = $pdo->query("SELECT Nombre_Categoria, Descripcion FROM Categoria");
+                        $stmt = $pdo->query("SELECT Nombre_Categoria FROM Categoria");
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<option value='{$row['Nombre_Categoria']}'>{$row['Descripcion']}</option>";
+                            echo "<option value='{$row['Nombre_Categoria']}'>{$row['Nombre_Categoria']}</option>";
                         }
                     ?>
                 </select>

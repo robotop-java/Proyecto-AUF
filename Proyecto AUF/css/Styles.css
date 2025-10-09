@@ -33,6 +33,9 @@ nav {
     padding: 0.5rem 1rem;
 
 }
+main {
+    flex: 1;
+}
 
 nav a:hover {
     color: var(--Color-Texto-Mous);
@@ -161,4 +164,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    width: 100%;
+    z-index: 100;
+
 }
