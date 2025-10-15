@@ -40,10 +40,11 @@ if (isset($_GET['mensaje'])) {
         <section id="Jugadores">
 
             <h1>Agrege los datos de su Partido</h1>
-            <form action="Partidos.php" method="POST" class="container">
+            <form id="FormPartidos" action="Partidos.php" method="POST" class="container">
 
                 <label for="Nombre_Categoria">Categoría</label>
                 <select name="Nombre_Categoria" id="Nombre_Categoria" required>
+                    <option value="">Seleccione una Categoria</option>
                     <?php
                         require '../config.php';
                         $stmt = $pdo->query("SELECT Nombre_Categoria FROM Categoria");
@@ -87,7 +88,7 @@ if (isset($_GET['mensaje'])) {
                 <label for="Fecha">Fecha</label>
                 <input type="date" name="Fecha" id="Fecha" required>
                 <button class="subirbutton" type="submit">></button>
-
+<p class="Errormsg" id="Error" ></p>
             </form>
 
         </section>
@@ -96,6 +97,7 @@ if (isset($_GET['mensaje'])) {
     <footer>
            <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
     </footer>
+    <script src="../JAVA/DataPartidos.js"></script>
 </body>
 
 </html>

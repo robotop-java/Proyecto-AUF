@@ -40,7 +40,7 @@ if (isset($_GET['mensaje'])) {
         <section id="Jugadores">
 
             <h1>Agrege los datos de su Torneo</h1>
-            <form action="Torneos.php" method="POST" class="container">
+            <form id="FormTorneo" action="Torneos.php" method="POST" class="container">
                 <label for="Nombre_Torneo">Nombre</label>
                 <input type="text" name="Nombre_Torneo" id="Nombre_Torneo" placeholder="Nombre del Torneo" required>
                 <label for="ID_Partidos">Partidos</label>
@@ -66,13 +66,14 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 <button class="subirbutton" type="submit">></button>
 
             </form>
-
+<p class="Errormsg" id="Error"></p>
         </section>
 
     </main>
     <footer>
            <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
     </footer>
+    <script src="../JAVA/DataTorneos.js" ></script>
 </body>
 
 </html>

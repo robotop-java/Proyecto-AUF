@@ -12,7 +12,7 @@ const Errormsg = document.getElementById("Error");
 function validateCI(CI) {
     const errors = [];
     if (!/^\d{8}$/.test(CI)) {
-        errors.push("- La Cedula tiene que ser de 8 digitos.\n")
+        errors.push("- La Cedula tiene que ser de 8 digitos.\n");
     }
 
     return errors;
@@ -20,7 +20,7 @@ function validateCI(CI) {
 function validateNumero(Numero) {
     const errors = [];
     if (!/^\d{2}$/.test(Numero)) {
-        errors.push("- Tiene que ser de 2 digitos.\n - Ejemplo: 01 o 10\n")
+        errors.push("- Tiene que ser de 2 digitos.\n - Ejemplo: 01 o 10\n");
     }
 
     return errors;
@@ -28,7 +28,7 @@ function validateNumero(Numero) {
 function validateGoles(Goles) {
     const errors = [];
     if (Goles.length > 60) {
-        errors.push("- No ser mas de 60 Numeros.\n ")
+        errors.push("- No ser mas de 60 Numeros.\n ");
     }
 
     return errors;
@@ -36,7 +36,7 @@ function validateGoles(Goles) {
 function validateTarjetas(Tarjetas) {
     const errors = [];
     if (Tarjetas.length > 60) {
-        errors.push("- No ser mas de 60 Numeros.\n ")
+        errors.push("- No ser mas de 60 Numeros.\n ");
     }
 
     return errors;
@@ -44,7 +44,7 @@ function validateTarjetas(Tarjetas) {
 function validatePartidos(Partidos) {
     const errors = [];
     if (Partidos.length > 60) {
-        errors.push("- No ser mas de 60 Numeros.\n ")
+        errors.push("- No ser mas de 60 Numeros.\n ");
     }
 
     return errors;
@@ -52,14 +52,14 @@ function validatePartidos(Partidos) {
 function validateTelefono(Telefono) {
     const errors = [];
     if (!/^\d{9}$/.test(Telefono)) {
-        errors.push("- Tiene que ser de 9 digitos.\n")
+        errors.push("- Tiene que ser de 9 digitos.\n");
     }
     return errors;
 }
 function validateNombre(Nombre) {
     const errors = [];
     if (Nombre.length > 255) {
-        errors.push("- No ser mas de 255 Letras")
+        errors.push("- No ser mas de 255 Letras");
     }
     if (!/[a-z]/.test(Nombre)) {
         errors.push("- Al menos una letra minúscula.\n");
@@ -70,12 +70,15 @@ function validateNombre(Nombre) {
     if (/\d/.test(Nombre)) {
         errors.push("- No llevar Numeros")
     }
+    if (/[^a-zA-Z\s]/.test(Nombre)) {
+  errors.push("- No llevar caracteres especiales\n");
+}
     return errors;
 }
 function validateApellido(Apellido) {
     const errors = [];
     if (Apellido.length > 255) {
-        errors.push("- No ser mas de 255 Letras")
+        errors.push("- No ser mas de 255 Letras");
     }
     if (!/[a-z]/.test(Apellido)) {
         errors.push("- Al menos una letra minúscula.\n");
@@ -84,8 +87,11 @@ function validateApellido(Apellido) {
         errors.push("- Al menos una letra mayúscula.\n");
     }
     if (/\d/.test(Apellido)) {
-        errors.push("- No llevar Numeros")
+        errors.push("- No llevar Numeros");
     }
+    if (/[^a-zA-Z\s]/.test(Apellido)) {
+  errors.push("- No llevar caracteres especiales");
+}
     return errors;
 }
 form.addEventListener('submit', (e) => {

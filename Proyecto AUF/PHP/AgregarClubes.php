@@ -15,7 +15,7 @@ if (isset($_GET['mensaje'])) {
     <link rel="stylesheet" href="../css/Styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgregarCategoria</title>
+    <title>AgregarClub</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ if (isset($_GET['mensaje'])) {
         <section id="Jugadores">
 
             <h1>Agrege los datos de su Club</h1>
-            <form action="Clubes.php" method="POST" class="container">
+            <form id="formClubes" action="Clubes.php" method="POST" class="container">
                 <label for="NombreClub">Nombre</label>
                 <input type="text" name="NombreClub" id="NombreClub" placeholder="Nombre del Club" required>
                 <label for="CategoriaNombre">Categoría</label>
@@ -92,7 +92,7 @@ if (isset($_GET['mensaje'])) {
                 </select>
 
                 <button class="subirbutton" type="submit">></button>
-
+<p class="Errormsg" id="Error" ></p>
             </form>
 
         </section>
@@ -101,6 +101,7 @@ if (isset($_GET['mensaje'])) {
     <footer>
            <p> @ 2024 TODOS LOS DERECHOS RESERVADOS</p>
     </footer>
+    <script src="../JAVA/DataClubes.js"></script>
 </body>
 
 </html>
