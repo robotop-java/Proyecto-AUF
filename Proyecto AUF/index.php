@@ -3,6 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/Styles-tablet.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/Styles-mobil.css" media="screen and (max-width: 767px)">
+</head>
     <link rel="icon" href="assets/AUF-Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,0 +1,59 @@
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    nav a {
+        margin: 0.3rem 0;
+        display: block;
+        font-size: 1rem;
+    }
+
+    .container, .container_index {
+        margin: 1rem;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+
+    label, input, select {
+        margin: 10px 1rem;
+        width: 90%;
+    }
+
+    button {
+        margin: 1.5rem auto;
+        width: 80%;
+        display: block;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .buscar {
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .buscar form {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .buscar-input {
+        width: 80%;
+        margin-bottom: 0.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
