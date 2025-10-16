@@ -8,17 +8,12 @@ const errors = [];
 if (Nombre_Categoria.length > 60){
     errors.length("- No ser mas de 60 Letras\n");
 }
-if (/\d/.test(Nombre_Categoria)){
-    errors.push("- No llevar numeros\n");
-}
+
 if (!/[a-z]/.test(Nombre_Categoria)){
     errors.push("- Al menos minusculas\n");
 }
 if (!/[A-Z]/.test(Nombre_Categoria)){
     errors.push("- Mayuscula al principio de el Nombre\n");
-}
-if (/[^a-zA-Z\s]/.test(Nombre_Categoria)) {
-  errors.push("- No llevar caracteres especiales\n");
 }
     return errors;
 }
